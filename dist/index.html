@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <input id="input" type="text" placeholder="Enter a city">
+    <button class="btn" class="fas fa-igloo" >Serach</button>
+
+
+
+
+
+    <script id="weather-template" type="text/x-handlebars-template">
+        {{#each allCityData}}
+        <div id="each-city">
+            <div id="name">{{name}}</div>
+            <div id="temp">{{temperture}}</div>
+            <div id="cond">{{condition}}</div>
+            <img src="{{conditionPic}}">
+            <div id="update">{{updatedAt}}</div>
+            <button id="save">Save</button>
+            <button id="delete">Remove</button>
+        </div>
+            {{/each}} 
+        
+        
+        
+    </script>
+
+    <div id="weather-info">
+    </div>
+
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
