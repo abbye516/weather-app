@@ -19,7 +19,7 @@ router.get('/cities', function (req, res) {
 
 router.post('/city', function (req, res) {
     let cityImport = new city(req.body)
-    // console.log(req.body)
+    console.log(req.body)
     cityImport.save()
     res.end()
 })

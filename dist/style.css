@@ -1,21 +1,68 @@
-/* #weather-city{
+ #weather-city{
     height: auto;
     width: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
    
-} */
+;} 
 
-body{
+ /* #each-city{
+    display: grid;
+    grid-template-areas:
+     "s t i"
+     "d n c"
+     ". . u";
+
+};
+
+#name{
+    grid-area: n;
+};
+
+#temp{
+    grid-area: t;
+
+};
+
+#cond{
+    grid-area: c;
+};
+
+#img{
+    grid-area: i;
+};
+
+#update{
+    grid-area: u;
+};
+
+#save{
+    grid-area: s;
+};
+
+#delete{
+    grid-area: d;
+
+};
+
+ */
+
+
+ 
+
+
+
+
+ body{
     background-image: url("https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/cloudy-sky.jpg?itok=FDxeE-I5");
-     background-repeat: auto;  
-     background-size: 160vh;
-}; 
+    background-repeat: auto; 
+    background-size: 160vh;
+} 
 
 #input{
         background: transparent;
         border: none;
-        border-bottom: 1px solid #0c0303;
+        border-bottom: 1px solid #000000;
         width: 30%;
-}
+} 
