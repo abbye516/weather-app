@@ -9,7 +9,6 @@ class TempManager {
         let data = await $.get('/cities') 
             if (data) {
                 this.cityData = data
-                // console.log(this.cityData)
             }
         }
 
@@ -23,7 +22,6 @@ class TempManager {
             condition: data.current.condition.text,
             conditionPic: data.current.condition.icon
         })
-        // console.log(this.cityData)
     }
 
     saveCity(cityName) {
