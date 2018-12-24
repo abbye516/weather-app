@@ -10,11 +10,11 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-mongoose.connect("mongodb://localhost/weather", { useNewUrlParser: true })
+mongoose.connect(process.env.CONNECTION_STRING ||"mongodb://localhost/weather", { useNewUrlParser: true })
 
 app.use('/', api)
 
 const port = 3000
-app.listen(port, function () {
+app.listen(process.env.PORT || 3000 , function () {
     console.log(`Running on port ${port}`)
 })
